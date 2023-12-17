@@ -2,3 +2,4 @@ odoo
 venv
 data
 screenshots
+*.pyc
