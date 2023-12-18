@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Top-level menu -->
+    <menuitem id="menu_masjid_membership_root" name="Masjid Membership" sequence="10"/>
+    
+    <!-- Sub-menu for Membership List -->
+    <menuitem id="menu_masjid_membership_list" name="Membership List" parent="menu_masjid_membership_root" action="masjid_membership.action_masjid_membership_list"/>
+</odoo>
