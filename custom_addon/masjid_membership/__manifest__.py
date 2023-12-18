@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Masjid Membership",
-
+    'icon': '/masjid_membership/static/description/icon.png',
+    'application': True,
     'summary': """
         A module to add masjid's membership details.
     """,
@@ -24,9 +25,7 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'views/menus.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
