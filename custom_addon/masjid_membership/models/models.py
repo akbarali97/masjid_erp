@@ -7,10 +7,15 @@ class MasjidMembership(models.Model):
     _name = 'masjid_membership.masjid_membership'
     _description = 'masjid_membership.masjid_membership'
 
+    GENDER_SELECTION = [
+        ('male', 'Male'),
+        ('female', 'Female'),
+    ]
 
-    membership_number = fields.Integer(string=_("Membership Number"))
-    name = fields.Char(string=_("Name"))
-    gender = fields.Selection()
+    membership_number = fields.Integer(string=_("Membership Number"), required=True)
+    name = fields.Char(string=_("Name"), required=True)
+    gender = fields.Selection(GENDER_SELECTION, string='Gender', required=True)
+
     date_of_birth = fields.Date(string=_("Name"))
 
     surname = fields.Many2one('masjid_membership.surname_record')
@@ -36,8 +41,19 @@ class MasjidMembership(models.Model):
 class LineageRecord(models.Model):
     _name = 'masjid_membership.lineage_record'
 
-    name = fields.Char(string=_("Name"))
-    relation = fields.Selection(_(""))
+
+    RELATION_SELECTION = [
+        ('father', _("Father")),
+        ('mother', _("Mother")),
+        ('brother', _("Brother")),
+        ('sister', _("Sister")),
+        ('grand_father', _("Grand Father")),
+        ('grand_mother', _("Grand Mother")),
+        ('uncle', _("Uncle")),
+    ]
+
+    name = fields.Char(string=_("Name"), required=True)
+    relation = fields.Selection(RELATION_SELECTION, string='relation', required=True)
 
 class SurnameRecord(models.Model):
     _name = 'masjid_membership.surname_record'
