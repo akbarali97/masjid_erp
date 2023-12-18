@@ -25,6 +25,9 @@
 
     # always loaded
     'data': [
+        'views/configurations.xml',
+        'views/detailedView.xml',
+        'views/listView.xml',
         'views/menus.xml',
     ],
     # only loaded in demonstration mode
