@@ -1,16 +1,11 @@
-<!-- masjid_membership/data/masjid_membership_actions.xml -->
-<odoo>
+<?xml version="1.0" encoding="utf-8"?><odoo>
     <data>
-        <record id="action_masjid_membership_list" model="ir.actions.act_window">
-            <field name="name">Masjid Memberships</field>
-            <field name="res_model">masjid_membership.masjid_membership</field>
-            <field name="view_mode">tree,form</field>
-        </record>
-
-        <record id="action_masjid_membership_form" model="ir.actions.act_window">
-            <field name="name">Masjid Membership</field>
-            <field name="res_model">masjid_membership.masjid_membership</field>
-            <field name="view_mode">form</field>
+        <record id="membership_list_view_action" model="ir.actions.act_window">
+            <field name="name">Memberships</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">masjid_membership.membership</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_id" ref="masjid_membership.membership_list_view"/>
         </record>
     </data>
 </odoo>

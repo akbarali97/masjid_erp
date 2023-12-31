@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Top-level menu -->
-    <menuitem id="menu_masjid_membership_root" name="Masjid Membership" sequence="10"/>
-    
+      <menuitem name="Membership"
+        id="membership_root_menu"
+        web_icon="masjid_membership,static/description/icon.png"
+        sequence="1"/>
+
     <!-- Sub-menu for Membership List -->
-    <menuitem id="menu_masjid_membership_list" name="Membership List" parent="menu_masjid_membership_root" action="masjid_membership.action_masjid_membership_list"/>
+    <menuitem name="Membership List"
+        id="membership_list_view_menu" 
+        parent="masjid_membership.membership_root_menu" 
+        sequence="1"
+        action="masjid_membership.membership_list_view_action"/>
 </odoo>

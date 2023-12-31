@@ -1,23 +1,17 @@
-<!-- masjid_membership/views/masjid_membership_list.xml -->
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="view_masjid_membership_list" model="ir.ui.view">
-            <field name="name">Masjid Membership List</field>
-            <field name="model">masjid_membership.masjid_membership</field>
+        <record id="membership_list_view" model="ir.ui.view">
+            <field name="name">Membership List</field>
+            <field name="model">masjid_membership.membership</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="membership_number"/>
+                    <field name="surname"/>
                     <field name="name"/>
                     <field name="gender"/>
-                    <!-- Add more fields as needed -->
                 </tree>
             </field>
-        </record>
-
-        <record id="action_masjid_membership_list" model="ir.actions.act_window">
-            <field name="name">Masjid Memberships</field>
-            <field name="res_model">masjid_membership.masjid_membership</field>
-            <field name="view_mode">tree,form</field>
         </record>
     </data>
 </odoo>

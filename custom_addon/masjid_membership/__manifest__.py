@@ -3,6 +3,7 @@
     'name': "Masjid Membership",
     'icon': '/masjid_membership/static/description/icon.png',
     'application': True,
+    'sequence': 1,
     'summary': """
         A module to add masjid's membership details.
     """,
@@ -25,13 +26,10 @@
 
     # always loaded
     'data': [
-        'views/configurations.xml',
+        'security/ir.model.access.csv',
         'views/detailedView.xml',
         'views/listView.xml',
+        'views/actions.xml',
         'views/menus.xml',
-    ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
     ],
 }
