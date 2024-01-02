@@ -1,11 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?><odoo>
     <data>
+
+
         <record id="membership_list_view_action" model="ir.actions.act_window">
             <field name="name">Memberships</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">masjid_membership.membership</field>
-            <field name="view_mode">kanban,tree,form</field>
-            <field name="view_id" ref="masjid_membership.membership_list_view"/>
+            <field name="view_mode">tree,form</field>
         </record>
+
+
+        <record id="member_list_view_action" model="ir.actions.act_window">
+            <field name="name">Members</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">masjid_membership.member</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+
+        <record id="surname_list_view_action" model="ir.actions.act_window">
+            <field name="name">Surnames</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">masjid_membership.surname</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record id="relation_list_view_action" model="ir.actions.act_window">
+            <field name="name">Relations</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">masjid_membership.relation</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record id="job_list_view_action" model="ir.actions.act_window">
+            <field name="name">Jobs</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">masjid_membership.job</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="education_list_view_action" model="ir.actions.act_window">
+            <field name="name">Jobs</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">masjid_membership.education</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="job_country_list_view_action" model="ir.actions.act_window">
+            <field name="name">Job Countries</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">masjid_membership.job_country</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="marital_status_list_view_action" model="ir.actions.act_window">
+            <field name="name">Marital Status</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">masjid_membership.marital_status</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="disease_list_view_action" model="ir.actions.act_window">
+            <field name="name">Diseases</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">masjid_membership.disease</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="graveyard_list_view_action" model="ir.actions.act_window">
+            <field name="name">Graveyards</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">masjid_membership.graveyard</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
     </data>
 </odoo>

@@ -1,19 +1,27 @@
-<!-- masjid_membership/views/masjid_membership_form.xml -->
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="view_masjid_membership_form" model="ir.ui.view">
-            <field name="name">Masjid Membership Form</field>
-            <field name="model">masjid_membership.masjid_membership</field>
+        <!-- <record id="membership_form_view" model="ir.ui.view">
+            <field name="name">Create/Edit Membership</field>
+            <field name="model">masjid_membership.membership</field>
             <field name="arch" type="xml">
                 <form>
-                    <group>
-                        <field name="membership_number"/>
-                        <field name="name"/>
-                        <field name="gender"/>
-                        <!-- Add more fields as needed -->
-                    </group>
+                    <sheet>
+                        <group>
+                            <field name="membership_number"/>
+                            <field name="member"/>
+                        </group>
+                    </sheet>
+
+                    <sheet>
+                        <group>
+                            <field name="dependants"/>
+                        </group>
+                    </sheet>
+
                 </form>
             </field>
-        </record>
+        </record> -->
+
     </data>
 </odoo>

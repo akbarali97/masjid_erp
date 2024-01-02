@@ -12,4 +12,65 @@
         parent="masjid_membership.membership_root_menu" 
         sequence="1"
         action="masjid_membership.membership_list_view_action"/>
+
+    <menuitem name="Members"
+        id="member_list_view_menu" 
+        parent="masjid_membership.membership_root_menu" 
+        sequence="2"
+        action="masjid_membership.member_list_view_action"/>
+
+
+    <menuitem name="Settings"
+        id="masjid_membership_settings_view_menu" 
+        parent="masjid_membership.membership_root_menu" 
+        sequence="3"/>
+
+    <menuitem name="Surnames"
+        id="surname_list_view_menu" 
+        parent="masjid_membership.masjid_membership_settings_view_menu" 
+        sequence="1"
+        action="masjid_membership.surname_list_view_action"/>
+
+    <menuitem name="Relations"
+        id="relation_list_view_menu" 
+        parent="masjid_membership.masjid_membership_settings_view_menu" 
+        sequence="2"
+        action="masjid_membership.relation_list_view_action"/>
+
+    <menuitem name="Education"
+        id="education_list_view_menu" 
+        parent="masjid_membership.masjid_membership_settings_view_menu" 
+        sequence="3"
+        action="masjid_membership.education_list_view_action"/>
+
+    <menuitem name="Job"
+        id="job_list_view_menu" 
+        parent="masjid_membership.masjid_membership_settings_view_menu" 
+        sequence="4"
+        action="masjid_membership.job_list_view_action"/>
+
+    <menuitem name="Job Countries"
+        id="job_country_list_view_menu" 
+        parent="masjid_membership.masjid_membership_settings_view_menu" 
+        sequence="5"
+        action="masjid_membership.job_country_list_view_action"/>
+
+    <menuitem name="Marital Statuses"
+        id="marital_status_list_view_menu" 
+        parent="masjid_membership.masjid_membership_settings_view_menu" 
+        sequence="6"
+        action="masjid_membership.marital_status_list_view_action"/>
+
+    <menuitem name="Disease"
+        id="disease_list_view_menu" 
+        parent="masjid_membership.masjid_membership_settings_view_menu" 
+        sequence="7"
+        action="masjid_membership.disease_list_view_action"/>
+
+    <menuitem name="Graveyards"
+        id="graveyard_list_view_menu" 
+        parent="masjid_membership.masjid_membership_settings_view_menu" 
+        sequence="8"
+        action="masjid_membership.graveyard_list_view_action"/>
+
 </odoo>
