@@ -95,4 +95,6 @@ class MemberDetails(models.Model):
     def _compute_age(self):
         for rec in self:
             if rec.date_of_birth:
-                return date.today().year - rec.date_of_birth.year
+                rec.age = date.today().year - rec.date_of_birth.year
+            else:
+                rec.age = 0
