@@ -15,9 +15,10 @@ class Relationship(models.Model):
     _name = 'masjid_membership.relationship'
     _description = 'Relationship'
 
-    relation = fields.Many2one('masjid_membership.relation', string=_("Relation"), required=False)
-    person = fields.Many2one('masjid_membership.member', string=_("dependant"), required=False)
-
+    membership_holder = fields.Many2one('masjid_membership.member', string=_("Membership Holder"), required=True)
+    relation = fields.Many2one('masjid_membership.relation', string=_("Relation"), required=True)
+    person = fields.Many2one('masjid_membership.member', string=_("Member"), required=True)
+    is_dependant = fields.Boolean(string=_("Is Dependant?"), required=True, default=True)
 
 
 class Surname(models.Model):
