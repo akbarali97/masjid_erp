@@ -14,7 +14,7 @@
             <field name="name">Members</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">masjid_membership.member</field>
-            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_mode">kanban,tree,form,graph,search</field>
         </record>
 
 
