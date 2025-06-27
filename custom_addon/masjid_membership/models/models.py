@@ -27,6 +27,12 @@ class Membership(models.Model):
         compute='_compute_filter_membership_holder',
         invisible=True)
 
+    existing_dependants = fields.Many2many(
+        comodel_name='masjid_membership.member',
+        compute='_compute_existing_dependants',
+        string=_("Existing Dependants"),
+        readonly=True)
+
     @api.depends('member', 'house_number')
     def _compute_display_name(self):
         for record in self:
@@ -41,6 +47,14 @@ class Membership(models.Model):
             dependant_members = self.env['masjid_membership.relationship'].search([
                 ('is_dependant', '=', False)]).mapped('person')
             record.filter_membership_holder = [(6, 0, dependant_members.ids)]
+
+    @api.depends('relationships', 'relationships.person')
+    def _compute_existing_dependants(self):
+        for record in self:
+            if record.relationships:
+                record.existing_dependants = record.relationships.mapped('person')
+            else:
+                record.existing_dependants = False
 
 class MemberDetails(models.Model):
     _name = 'masjid_membership.member'

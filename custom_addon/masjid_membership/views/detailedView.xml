@@ -31,7 +31,7 @@
                     </sheet>
                     <sheet>
                         <group>
-                            <field name="existing_dependants" invisible="1"/>                        
+                            <field name="existing_dependants" invisible="1" readonly="1"/>
                             <field name="relationships" 
                                    string="Relationship" 
                                    colspan="2" 
