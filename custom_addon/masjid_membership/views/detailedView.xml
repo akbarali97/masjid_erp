@@ -1,27 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!-- <record id="membership_form_view" model="ir.ui.view">
+        <record id="membership_form_view" model="ir.ui.view">
             <field name="name">Create/Edit Membership</field>
             <field name="model">masjid_membership.membership</field>
             <field name="arch" type="xml">
                 <form>
+                    <sheet string="Membership">
+                        <group>
+                            <field name="member" 
+                                   on_change="1" 
+                                   modifiers="{&quot;required&quot;: true}" 
+                                   can_create="true" 
+                                   can_write="true"/>
+                            <field name="membership_number" modifiers="{&quot;required&quot;: true}"/>
+                            <field name="house_number" 
+                                   on_change="1" 
+                                   modifiers="{&quot;required&quot;: true}"/>
+                            <field name="house_name" modifiers="{&quot;required&quot;: true}"/>
+                            <field name="joined_on" modifiers="{&quot;required&quot;: true}"/>
+                        </group>
+
+                    </sheet>
                     <sheet>
                         <group>
-                            <field name="membership_number"/>
-                            <field name="member"/>
-                        </group>
+                            <field name="ward_number" modifiers="{&quot;required&quot;: true}"/>
+                            <field name="locality"/>
+                            <field name="address" colspan="2" rowspan="4"/>
+                        </group>  
                     </sheet>
-
                     <sheet>
                         <group>
-                            <field name="dependants"/>
+                            <field name="existing_dependants" invisible="1"/>                        
+                            <field name="relationships" 
+                                   string="Relationship" 
+                                   colspan="2" 
+                                   can_create="true" 
+                                   can_write="true">
+                                <tree string="Relationship" editable="bottom">
+                                    <field name="person" />
+                                    <field name="relation"/>
+                                </tree>
+                            </field>
                         </group>
                     </sheet>
-
                 </form>
             </field>
-        </record> -->
-
+        </record>
     </data>
 </odoo>
