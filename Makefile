@@ -6,3 +6,6 @@ install:
 
 run:
 	. ./venv/bin/activate && odoo/odoo-bin -c odoo.conf
+
+upgrade:
+	. ./venv/bin/activate && odoo/odoo-bin -c odoo.conf -u masjid_membership --stop-after-init
