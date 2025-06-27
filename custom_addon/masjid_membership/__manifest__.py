@@ -31,5 +31,9 @@
         'views/listView.xml',
         'views/actions.xml',
         'views/menus.xml',
+        'data/relations.xml',
+        'data/diseases.xml',
+        'data/graveyards.xml',
+        'data/marital_status.xml',
     ],
 }
