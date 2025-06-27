@@ -8,6 +8,7 @@
                 <form>
                     <sheet string="Membership">
                         <group>
+                            <field name="filter_membership_holder" invisible="1"/>
                             <field name="member" 
                                    on_change="1" 
                                    modifiers="{&quot;required&quot;: true}" 
